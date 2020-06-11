@@ -28,7 +28,6 @@ describe('Open new window and go to Akvarij blog', () => {
 
 describe('Check if the last post is on the frontpage', () => {
   it('should log in into admin', async function() {
-    // # You can register AdminPage in before function. No need to initialize it for every test.
     const adminPage = new AdminPage(browserWindow);
 
     await adminPage.logInClick();
@@ -97,7 +96,6 @@ describe('Forbes category', () => {
   }).timeout(5000);
 
   it('should write a comment and check it', async function() {
-    // # You can register HomePage in before function. No need to initialize it for every test.
     const homePage = new HomePage(browserWindow);
 
     await homePage.writeAComment();
