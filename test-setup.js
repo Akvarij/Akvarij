@@ -4,10 +4,7 @@ const _ = require('lodash');
 const globalVariables = _.pick(global, [
   'browser',
   'expect',
-  'joanDeviceName',
-  'joanDevicePage',
   'API_HOST',
-  'ENV',
   'screenshotsEnabled'
 ]);
 
@@ -27,27 +24,18 @@ const opts = {
   timeout: 10000
 };
 
-const setup = async function () {
-  (global.expect = expect),
-    (global.browser = await puppeteer.launch(opts)),
-    (global.joanDeviceName = 'something_default'),
-    (global.joanDevicePage = 'stub'),
-    (global.ENV = 'DEVELOP'), //'DEVELOP' //'STAG', 'LOCAL' //'DOCKER'//'STAG'//'DEV'
-    (global.screenshotsEnabled = true);
-  // global.page = await browser.newPage();
+const setup = async function() {
+  (global.expect = expect), (global.browser = await puppeteer.launch(opts));
 };
 
 // expose variables
 before(setup);
 
 // close browser and reset global variables
-after(function () {
+after(function() {
   console.log('after');
   global.browser.close();
   global.browser = globalVariables.browser;
   global.expect = globalVariables.expect;
-  global.joanDeviceName = globalVariables.joanDeviceName;
-  global.joanDevicePage = globalVariables.joanDevicePage;
-  global.ENV = globalVariables.ENV;
   global.screenshotsEnabled = globalVariables.screenshotsEnabled;
 });

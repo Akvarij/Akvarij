@@ -5,7 +5,7 @@ const cTxt = require('../Text/Text');
 let browserWindow;
 
 const API_HOST = 'http://localhost:8000';
-const VIEW_PORT = { width: 1825, height: 1025 };
+const VIEW_PORT = { width: 1600, height: 900 };
 
 describe('Open new window and go to Akvarij blog', () => {
   before(async () => {

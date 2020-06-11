@@ -1,44 +1,33 @@
 {
-	"name": "joan",
-	"version": "0.1.0",
-	"description": "Install -------",
-	"main": "index.js",
-	"dependencies": {
-		"@babel/plugin-proposal-class-properties": "^7.8.3",
-		"@babel/plugin-proposal-object-rest-spread": "^7.9.6",
-		"@babel/plugin-transform-arrow-functions": "^7.8.3",
-		"@babel/plugin-transform-block-scoping": "^7.8.3",
-		"@babel/plugin-transform-object-assign": "^7.8.3",
-		"@babel/polyfill": "^7.8.7",
-		"@babel/preset-env": "^7.9.6",
-		"babel-eslint": "^7.2.3",
-		"chai": "4.2.0",
-		"dotenv": "^8.2.0",
-		"es6-promise": "~3.0.2",
-		"eslint": "^4.7.1",
-		"eslint-plugin-react": "^7.19.0",
-		"lodash": "^4.17.15",
-		"mocha": "^7.2.0",
-		"moment": "^2.25.3",
-		"prettier": "^1.14.3",
-		"puppeteer": "^1.20.0",
-		"puppeteer-screenshot-tester": "1.1.0"
-	},
-	"scripts": {
-		"format": "prettier --config .prettierrc --ignore-path .prettierignore --write './**/*.{js,jsx,css,scss,less}'",
-		"lint": "eslint --ext .js --ext .jsx  ./joan/calendars/static/device/joan-board/",
-		"test": "npm run lint && npm run mocha",
-		"mocha": "mocha --opts mocha.opts",
-		"build-dev": "npm install && cp .env.properties .env"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@bill:apps/joan.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@babel/core": "^7.9.6",
-		"@babel/register": "^7.9.0"
-	}
+  "name": "joan",
+  "version": "0.1.0",
+  "description": "Install -------",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/plugin-transform-block-scoping": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^7.2.3",
+    "chai": "4.2.0",
+    "dotenv": "^8.2.0",
+    "es6-promise": "~3.0.2",
+    "eslint": "^4.7.1",
+    "eslint-plugin-react": "^7.19.0",
+    "lodash": "^4.17.15",
+    "mocha": "^7.2.0",
+    "moment": "^2.25.3",
+    "prettier": "^1.14.3",
+    "puppeteer": "^1.20.0",
+    "puppeteer-screenshot-tester": "1.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/register": "^7.9.0"
+  }
 }
