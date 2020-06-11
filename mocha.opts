@@ -1,0 +1,6 @@
+--require @babel/register
+--require @babel/polyfill
+#--bail
+
+./test-setup.js
+./test/BlogTest.js
