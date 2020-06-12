@@ -17,7 +17,7 @@ You'll be redirected to registration form.
 
 ## Home page and post creation
 
-You'll be redirectet to home page. Create 4 new posts.
+You'll be redirectet to home page. Create 3 new posts.
 
 1. Post: https://the-stack-overflow-podcast.simplecast.com/episodes/episode-240-javascript-needs-to-get-a-job. Copy "Javascript is ready to get its own place" in the title and everything else in the body. Under categories, add new category: JavaScript. This post should be only in JavaScript category. Publish.
 
