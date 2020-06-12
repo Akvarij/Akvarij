@@ -16,6 +16,11 @@ module.exports = class HomePage {
     return await this.pageHelper.readText(element);
   }
 
+  async getDevelopmentTitle() {
+    const element = '.cat-item-2';
+    return await this.pageHelper.readText(element);
+  }
+
   async getForbesTitle() {
     const element = '.cat-item-4';
     return await this.pageHelper.readText(element);
@@ -29,6 +34,11 @@ module.exports = class HomePage {
   async getUncategorizedTitle() {
     const element = '.cat-item-1';
     return await this.pageHelper.readText(element);
+  }
+
+  async developmentClick() {
+    const element = '.cat-item-2 a';
+    await this.pageHelper.waitForClickable(element);
   }
 
   async forbesClick() {

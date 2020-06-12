@@ -60,6 +60,10 @@ describe('Categories', () => {
   it('should check categories options', async function() {
     const homePage = new HomePage(browserWindow);
 
+    const developmentTitle = await homePage.getDevelopmentTitle();
+    expect(developmentTitle).to.contain(cTxt.DEVELOPMENT_TITLE);
+    console.log(developmentTitle);
+
     const forbesTitle = await homePage.getForbesTitle();
     expect(forbesTitle).to.contain(cTxt.FORBES_TITLE);
     console.log(forbesTitle);
@@ -72,6 +76,35 @@ describe('Categories', () => {
     expect(uncategorizedTitle).to.contain(cTxt.UNCATEGORIZED_TITLE);
     console.log(uncategorizedTitle);
   }).timeout(20000);
+});
+
+describe('Development category', () => {
+  it('should check Development category, if it displays right blogs', async function() {
+    const homePage = new HomePage(browserWindow);
+
+    await homePage.developmentClick();
+
+    const pageTitle = await homePage.getPageTitle();
+    expect(pageTitle).to.be.eql(cTxt.DEVELOPMENT_PAGE_TITLE);
+    console.log(pageTitle);
+  }).timeout(10000);
+
+  it('should check if blog is in right category', async function() {
+    const homePage = new HomePage(browserWindow);
+
+    await homePage.blogClick();
+
+    const blogCategory = await homePage.checkBlogsCategory();
+    expect(blogCategory).to.be.eql(cTxt.DEVELOPMENT_TITLE);
+    console.log(blogCategory);
+  }).timeout(5000);
+
+  it('should write a comment and check it', async function() {
+    const homePage = new HomePage(browserWindow);
+
+    await homePage.writeAComment();
+    await homePage.checkComment();
+  }).timeout(10000);
 });
 
 describe('Forbes category', () => {
@@ -94,13 +127,6 @@ describe('Forbes category', () => {
     expect(blogCategory).to.be.eql(cTxt.FORBES_TITLE);
     console.log(blogCategory);
   }).timeout(5000);
-
-  it('should write a comment and check it', async function() {
-    const homePage = new HomePage(browserWindow);
-
-    await homePage.writeAComment();
-    await homePage.checkComment();
-  }).timeout(10000);
 });
 
 describe('JavaScript category', () => {

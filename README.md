@@ -30,3 +30,7 @@ In total, you'll have 4 posts and 4 categories.
 ## Page Appearance
 
 Go to "Appearance" and add new theme: Twenty Seventeen. Set it to active.
+
+## Run
+
+Write "npm test" in console
